@@ -7,25 +7,25 @@
         "prebuild": {
             "commands": [
                 "echo 'test prebuild'",
-                "bq show --schema --format=prettyjson 'user_location.tracking_table'"
+                "bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'"
             ]
         },
         "postbuild": {
             "commands": [
                 "echo 'test postbuild'",
-                "bq show --schema --format=prettyjson 'user_location.tracking_table'"
+                "bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'"
             ]
         },
         "precreate": {
             "commands": [
                 "echo 'test precreate'",
-                "bq show --schema --format=prettyjson 'user_location.tracking_table'"
+                "bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'"
             ]
         },
         "postcreate": {
             "commands": [
                 "echo 'test postcreate'",
-                "bq show --schema --format=prettyjson 'user_location.tracking_table'"
+                "bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'"
             ]
         }
     }

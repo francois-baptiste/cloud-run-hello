@@ -7,20 +7,21 @@
         "prebuild": {
             "commands": [
                 "echo 'test prebuild'",
-                "bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'"
+                "#bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'"
             ]
         },
         "postbuild": {
             "commands": [
                 "echo 'test postbuild'",
-                "bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'"
+                "#bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'"
             ]
         },
         "precreate": {
             "commands": [
                 "echo 'test precreate'",
-                "bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'",
+                "#bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'",
                 "docker pull gcr.io/cloudrun/hello",
+                "echo $GOOGLE_CLOUD_PROJECT"
                 "docker tag gcr.io/cloudrun/hello gcr.io/$GOOGLE_CLOUD_PROJECT/killme"
             ]
         },

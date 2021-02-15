@@ -19,9 +19,9 @@
         "precreate": {
             "commands": [
                 "echo 'test precreate'",
+                "bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'",
                 "docker pull gcr.io/cloudrun/hello",
-                "docker tag gcr.io/cloudrun/hello killme",
-                "bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'"
+                "docker tag gcr.io/cloudrun/hello gcr.io/$GOOGLE_CLOUD_PROJECT/killme"
             ]
         },
         "postcreate": {

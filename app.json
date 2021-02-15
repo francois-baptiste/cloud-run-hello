@@ -1,4 +1,5 @@
 {
+    "name": "killme",
     "build": {
         "skip": true
     },
@@ -18,13 +19,16 @@
         "precreate": {
             "commands": [
                 "echo 'test precreate'",
+                "docker pull gcr.io/cloudrun/hello",
+                "docker tag gcr.io/cloudrun/hello killme",
                 "bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'"
             ]
         },
         "postcreate": {
             "commands": [
                 "echo 'test postcreate'",
-                "bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'"
+                "bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'",
+                "gcloud run services delete killme"
             ]
         }
     }

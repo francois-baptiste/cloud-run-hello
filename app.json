@@ -1,5 +1,4 @@
 {
-    "name": "seploy-bq-function",
     "build": {
         "skip": true
     },

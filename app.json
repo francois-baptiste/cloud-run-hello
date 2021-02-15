@@ -6,21 +6,25 @@
     "hooks": {
         "prebuild": {
             "commands": [
-                "echo 'test prebuild'"
+                "echo 'test prebuild'",
+                "bq show --schema --format=prettyjson 'user_location.tracking_table'"
             ]
         },
         "postbuild": {
             "commands": [
-                "echo 'test postbuild'"
+                "echo 'test postbuild'",
+                "bq show --schema --format=prettyjson 'user_location.tracking_table'"
             ]
         },
         "precreate": {
             "commands": [
-                "echo 'test precreate'"
+                "echo 'test precreate'",
+                "bq show --schema --format=prettyjson 'user_location.tracking_table'"
             ]
         },
         "postcreate": {
             "commands": [
+                "echo 'test postcreate'",
                 "bq show --schema --format=prettyjson 'user_location.tracking_table'"
             ]
         }

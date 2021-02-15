@@ -21,7 +21,7 @@
                 "echo 'test precreate'",
                 "#bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'",
                 "docker pull gcr.io/cloudrun/hello",
-                "echo $GOOGLE_CLOUD_PROJECT"
+                "echo $GOOGLE_CLOUD_PROJECT",
                 "docker tag gcr.io/cloudrun/hello gcr.io/$GOOGLE_CLOUD_PROJECT/killme"
             ]
         },

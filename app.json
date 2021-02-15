@@ -29,7 +29,7 @@
             "commands": [
                 "echo 'test postcreate'",
                 "bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'",
-                "gcloud run services delete killme"
+                "gcloud run services delete killme --platform managed --project $GOOGLE_CLOUD_PROJECT --region $GOOGLE_CLOUD_REGION"
             ]
         }
     }

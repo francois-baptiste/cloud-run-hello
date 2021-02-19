@@ -7,7 +7,7 @@
         "prebuild": {
             "commands": [
                 "echo 'test prebuild'",
-                "#bq show --schema --format=prettyjson --project_id 'slg-datasciens-dev-prj-datasc' 'user_location.tracking_table'"
+                "python deploy.py"
             ]
         },
         "postbuild": {
